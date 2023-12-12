@@ -112,3 +112,33 @@ h1 {
   font-weight: 400;
   letter-spacing: 0.4px;
 }
+
+.blog {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+  font-size: 2.25rem;
+}
+.blog_span{
+    color: #3f4c5a;
+    font-family: "TT Norms Pro",Helvetica,Arial,sans-serif;
+    letter-spacing: .4px;
+    -webkit-font-smoothing: antialiased
+}
+.flex_name{
+    width: 40%;
+    margin: auto;
+}
+.flex_name_flex{
+    display: flex;
+    justify-content: space-around;
+}
+.div{
+    display: block;
+}
+.div_span{
+    color:#3f4c5a;
+    font-size:22px
+}
