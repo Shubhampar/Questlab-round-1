@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Button } from "@chakra-ui/react";
-import '../App.css';
+import '../App.css'
 const Footer = () => {
   const columnStyle = {
     flex: 1,
@@ -10,12 +10,7 @@ const Footer = () => {
     <div>
       <h1
         className="h1_tag_footer"
-        style={{
-          fontSize: "76px",
-          lineHeight: "100%",
-
-          fontWeight: 400,
-        }}
+        
       >
         Join the future of customer <br />
         service
@@ -52,7 +47,7 @@ const Footer = () => {
       <br/>
       <br/>
       <br/>
-      <div style={{ display: "flex", backgroundColor: "#f4f4f4" }}>
+      <div  className='footer_div_part'>
         {/* Pricing Column */}
         <div style={columnStyle}>
           <h2

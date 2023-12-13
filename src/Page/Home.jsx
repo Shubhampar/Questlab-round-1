@@ -1,14 +1,23 @@
-import React from "react";
-import '../App.css';
-import { Box, Button, Flex, Image,Divider } from "@chakra-ui/react";
-import homepage from "../Images/homepage.mp4";
-import Swiper1MainPart from "./Swiper1MainPart";
+
+import React, { useState } from "react";
+import Chatbox from "./Chatbox";
+import { GrChat } from "react-icons/gr";
+import { Box, Button, Divider, Flex, Image } from "@chakra-ui/react";
 import help from "../Images/help.png";
 import message from '../Images/message.png';
 import main from '../Images/main.png'
-const Homepage = () => {
+import homepage from "../Images/homepage.mp4";
+
+const Home = () => {
+  const [chatboxOpen, setChatboxOpen] = useState(false);
+
+  const handleChatboxToggle = () => {
+    setChatboxOpen(!chatboxOpen);
+  };
+
   return (
-    <div className="div_box">
+    <div className="container mx-auto">
+      <div className="div_box">
       <Box className="box1">
         <Box className="box">
           <h1 className="heading">
@@ -71,7 +80,7 @@ const Homepage = () => {
       <br />
       <Box>
         <Box width={"80%"} margin={"auto"}>
-          <Swiper1MainPart />
+          {/* <Swiper1MainPart /> */}
         </Box>
       </Box>
       <Box>
@@ -88,7 +97,20 @@ const Homepage = () => {
         <Image src={main} />
       </Box>
     </div>
+    
+      <button
+        className="fixed bottom-4 right-10 p-4 bg-blue-500 text-white rounded-full transition-all duration-300"
+        onClick={handleChatboxToggle}
+      >
+        <GrChat/>
+      </button>
+
+    
+      {chatboxOpen && (
+        <Chatbox handleChatboxToggle={handleChatboxToggle}/>
+      )}
+    </div>
   );
 };
 
-export default Homepage;
+export default Home;
